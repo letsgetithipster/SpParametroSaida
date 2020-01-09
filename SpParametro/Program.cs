@@ -1,6 +1,4 @@
 ﻿using SpParametro.Business;
-using SpParametro.DataAccess;
-using System;
 using System.Configuration;
 
 
@@ -19,14 +17,7 @@ namespace SpParametro
         {
             Aplicacao aplicacao = new Aplicacao(connectionString);
 
-            try
-            {
-                aplicacao.Iniciar();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            aplicacao.Iniciar();
         }
     }
 }
